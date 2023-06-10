@@ -2,6 +2,8 @@
 
 Script hecho en python para dar color a celdas de un archivo excel tomando como referencia los ID's y en base a el cambio de ID colorear las columnas correspondientes.
 
+El script no ordena el excel en ninguna manera, así que antes de correr el script puedes ordenarlo para al final solo darle color
+
 ## Librerias necesarias
 
 * openpyxl
