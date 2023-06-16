@@ -22,6 +22,7 @@ i=0
 
 #lista donde se guardaran todos los identificadores de los usuarios
 identificadores = []
+i
 #while que se detiene hasta que encuentre una celda vacia
 while(valor_fila != None):
     valor_fila = (hoja[f'A{contador_filas}'].value)
@@ -29,7 +30,7 @@ while(valor_fila != None):
         break
     else:
         valor_fila = int(hoja[f'A{contador_filas}'].value)
-        identificadores.insert(i,int(hoja[f'A{contador_filas}'].value))
+        identificadores.append(valor_fila)
         contador_filas += 1
         i += 1
 
@@ -55,14 +56,15 @@ for i in range(0, numero_total_identificadores_no_repetidos):
         continue
 
 
+
 for i in range(2, contador_filas):
     id = int(hoja[f'A{i}'].value)
     if id not in identificadores_posicion_par:
-        hoja[f'A{i}'].fill = PatternFill(patternType='solid', fgColor='00FFFF')
-        hoja[f'B{i}'].fill = PatternFill(patternType='solid', fgColor='00FFFF')
-        hoja[f'C{i}'].fill = PatternFill(patternType='solid', fgColor='00FFFF')
-        hoja[f'D{i}'].fill = PatternFill(patternType='solid', fgColor='00FFFF')
-        hoja[f'E{i}'].fill = PatternFill(patternType='solid', fgColor='00FFFF')
+        hoja[f'A{i}'].fill = PatternFill(patternType='solid', fgColor='9EAEF4')
+        hoja[f'B{i}'].fill = PatternFill(patternType='solid', fgColor='9EAEF4')
+        hoja[f'C{i}'].fill = PatternFill(patternType='solid', fgColor='9EAEF4')
+        hoja[f'D{i}'].fill = PatternFill(patternType='solid', fgColor='9EAEF4')
+        hoja[f'E{i}'].fill = PatternFill(patternType='solid', fgColor='9EAEF4')
 
 
 #La ruta dada al principio del scrip es donde se guardará el archivo coloreado
